@@ -1,7 +1,7 @@
 //PROTECT THE MIDDLEWARE
 const jwt = require("jsonwebtoken");
 const asyncHandler = require("./async");
-const User = require("../models/user.model");
+const User = require("../models/student");
 
 //Protect routes
 exports.protect = asyncHandler(async (req, res, next) => {
