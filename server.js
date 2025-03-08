@@ -26,8 +26,7 @@ connectDB();
 
 // Route files
 const auth = require("./routes/student");
-// const batch = require("./routes/batch");
-// const course = require("./routes/course");
+
 
 // Body parser
 app.use(express.json());
@@ -63,8 +62,7 @@ app.use(
 app.use("/api/v1/auth", auth);
 app.use("/api/listing", listing);
 
-// app.use("/api/v1/batch", batch);
-// app.use("/api/v1/course", course);
+
 
 const PORT = process.env.PORT || 3000;
 

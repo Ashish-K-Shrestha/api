@@ -12,7 +12,7 @@ const findAll = async (req, res) => {
 
 const save = async (req, res) => {
   try {
-    const { name, price, description } = req.body;
+    const { name, price, description, phone } = req.body;
     if (!req.file) {
       return res.status(400).json({ error: "Image file is required" });
     }
@@ -21,6 +21,7 @@ const save = async (req, res) => {
       name,
       price,
       description,
+      phone,
       image: req.file.filename, // Store only the filename
     });
 
